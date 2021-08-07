@@ -3,21 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BBE08B926BA0B8100D898CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08B826BA0B8100D898CD /* AppDelegate.swift */; };
+		313DCBAA73480F33793BB68E /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7C9B35D58F4C772D3AEA8 /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework */; };
+		5B3A6B3126BE75F50055AB44 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A6B3026BE75F50055AB44 /* NetworkRequest.swift */; };
+		5B8D33CA26BC849100C45BF9 /* MovieWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D33C926BC849100C45BF9 /* MovieWorker.swift */; };
 		5BBE08BB26BA0B8100D898CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08BA26BA0B8100D898CD /* SceneDelegate.swift */; };
 		5BBE08BD26BA0B8100D898CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08BC26BA0B8100D898CD /* ViewController.swift */; };
-		5BBE08C226BA0B8300D898CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBE08C126BA0B8300D898CD /* Assets.xcassets */; };
 		5BBE08C526BA0B8300D898CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBE08C326BA0B8300D898CD /* LaunchScreen.storyboard */; };
 		5BBE08D026BA0B8300D898CD /* StudioGhilbiAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08CF26BA0B8300D898CD /* StudioGhilbiAppsTests.swift */; };
 		5BBE08DB26BA0B8300D898CD /* StudioGhilbiAppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08DA26BA0B8300D898CD /* StudioGhilbiAppsUITests.swift */; };
 		5BBE08E926BA0FCF00D898CD /* MovieListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08E826BA0FCF00D898CD /* MovieListViewControllerTest.swift */; };
 		5BBE08EB26BA144D00D898CD /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08EA26BA144D00D898CD /* MovieListViewController.swift */; };
 		5BBE08ED26BA175400D898CD /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BBE08EC26BA175400D898CD /* MovieListViewController.xib */; };
-		5BBE08EF26BA1F2600D898CD /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08EE26BA1F2600D898CD /* MovieModel.swift */; };
+		5BBE08EF26BA1F2600D898CD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08EE26BA1F2600D898CD /* Movie.swift */; };
+		5BBE08FE26BB1CC600D898CD /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08FC26BB1CC600D898CD /* MovieCollectionViewCell.swift */; };
+		5BBE08FF26BB1CC600D898CD /* MovileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BBE08FD26BB1CC600D898CD /* MovileCollectionViewCell.xib */; };
+		5BBE090226BB6B6300D898CD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE090126BB6B6300D898CD /* NetworkService.swift */; };
+		5BBE090626BB6E0900D898CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBE090426BB6E0900D898CD /* Assets.xcassets */; };
+		5BBE090A26BB6E7A00D898CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE090926BB6E7A00D898CD /* AppDelegate.swift */; };
+		5BBE090D26BB7C8800D898CD /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE090C26BB7C8800D898CD /* MovieListViewModel.swift */; };
+		62B138E18BB44D1D5BDD2D2C /* Pods_StudioGhilbiApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A178B44503602090B02A607F /* Pods_StudioGhilbiApps.framework */; };
+		E92A57D5952FAE3675ED8E18 /* Pods_StudioGhilbiAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A201B0F7A0E10CEF0274D97E /* Pods_StudioGhilbiAppsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CACBD727E6BD67788258472 /* Pods-StudioGhilbiAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudioGhilbiAppsTests.debug.xcconfig"; path = "Target Support Files/Pods-StudioGhilbiAppsTests/Pods-StudioGhilbiAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		498092286819FD26C559F5F3 /* Pods-StudioGhilbiApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudioGhilbiApps.release.xcconfig"; path = "Target Support Files/Pods-StudioGhilbiApps/Pods-StudioGhilbiApps.release.xcconfig"; sourceTree = "<group>"; };
+		56B7C9B35D58F4C772D3AEA8 /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59ABB96B6EAC555D959417E2 /* Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig"; path = "Target Support Files/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B3A6B3026BE75F50055AB44 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		5B8D33C926BC849100C45BF9 /* MovieWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorker.swift; sourceTree = "<group>"; };
 		5BBE08B526BA0B8100D898CD /* StudioGhilbiApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioGhilbiApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BBE08B826BA0B8100D898CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBE08BA26BA0B8100D898CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5BBE08BC26BA0B8100D898CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BBE08C126BA0B8300D898CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BBE08C426BA0B8300D898CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5BBE08C626BA0B8300D898CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BBE08CB26BA0B8300D898CD /* StudioGhilbiAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudioGhilbiAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBE08CF26BA0B8300D898CD /* StudioGhilbiAppsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioGhilbiAppsTests.swift; sourceTree = "<group>"; };
 		5BBE08D126BA0B8300D898CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +66,19 @@
 		5BBE08E826BA0FCF00D898CD /* MovieListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewControllerTest.swift; sourceTree = "<group>"; };
 		5BBE08EA26BA144D00D898CD /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		5BBE08EC26BA175400D898CD /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
-		5BBE08EE26BA1F2600D898CD /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		5BBE08EE26BA1F2600D898CD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		5BBE08FC26BB1CC600D898CD /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		5BBE08FD26BB1CC600D898CD /* MovileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovileCollectionViewCell.xib; sourceTree = "<group>"; };
+		5BBE090126BB6B6300D898CD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5BBE090426BB6E0900D898CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BBE090526BB6E0900D898CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBE090926BB6E7A00D898CD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BBE090C26BB7C8800D898CD /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		7F4781183F9330C714F2A5AE /* Pods-StudioGhilbiApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudioGhilbiApps.debug.xcconfig"; path = "Target Support Files/Pods-StudioGhilbiApps/Pods-StudioGhilbiApps.debug.xcconfig"; sourceTree = "<group>"; };
+		9A7EB14FBB3627DE994DD01F /* Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.release.xcconfig"; path = "Target Support Files/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A178B44503602090B02A607F /* Pods_StudioGhilbiApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudioGhilbiApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A201B0F7A0E10CEF0274D97E /* Pods_StudioGhilbiAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudioGhilbiAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91128ABA6E7CBFBA3FDB17B /* Pods-StudioGhilbiAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudioGhilbiAppsTests.release.xcconfig"; path = "Target Support Files/Pods-StudioGhilbiAppsTests/Pods-StudioGhilbiAppsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B138E18BB44D1D5BDD2D2C /* Pods_StudioGhilbiApps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92A57D5952FAE3675ED8E18 /* Pods_StudioGhilbiAppsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +102,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313DCBAA73480F33793BB68E /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B8D33C826BC846100C45BF9 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D33C926BC849100C45BF9 /* MovieWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		5BBE08AC26BA0B8100D898CD = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +124,8 @@
 				5BBE08CE26BA0B8300D898CD /* StudioGhilbiAppsTests */,
 				5BBE08D926BA0B8300D898CD /* StudioGhilbiAppsUITests */,
 				5BBE08B626BA0B8100D898CD /* Products */,
+				6FB58C63E67991E926CF687A /* Pods */,
+				78D5090A24D6BC98FD022909 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,15 +142,18 @@
 		5BBE08B726BA0B8100D898CD /* StudioGhilbiApps */ = {
 			isa = PBXGroup;
 			children = (
-				5BBE08B826BA0B8100D898CD /* AppDelegate.swift */,
-				5BBE08BA26BA0B8100D898CD /* SceneDelegate.swift */,
+				5B8D33C826BC846100C45BF9 /* Worker */,
+				5BBE090826BB6E3700D898CD /* App */,
+				5BBE090326BB6D9200D898CD /* Assets */,
+				5BBE090026BB6B2800D898CD /* Network */,
 				5BBE08BC26BA0B8100D898CD /* ViewController.swift */,
-				5BBE08C126BA0B8300D898CD /* Assets.xcassets */,
 				5BBE08C326BA0B8300D898CD /* LaunchScreen.storyboard */,
-				5BBE08C626BA0B8300D898CD /* Info.plist */,
 				5BBE08EA26BA144D00D898CD /* MovieListViewController.swift */,
 				5BBE08EC26BA175400D898CD /* MovieListViewController.xib */,
-				5BBE08EE26BA1F2600D898CD /* MovieModel.swift */,
+				5BBE08EE26BA1F2600D898CD /* Movie.swift */,
+				5BBE08FC26BB1CC600D898CD /* MovieCollectionViewCell.swift */,
+				5BBE08FD26BB1CC600D898CD /* MovileCollectionViewCell.xib */,
+				5BBE090C26BB7C8800D898CD /* MovieListViewModel.swift */,
 			);
 			path = StudioGhilbiApps;
 			sourceTree = "<group>";
@@ -137,6 +177,56 @@
 			path = StudioGhilbiAppsUITests;
 			sourceTree = "<group>";
 		};
+		5BBE090026BB6B2800D898CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5BBE090126BB6B6300D898CD /* NetworkService.swift */,
+				5B3A6B3026BE75F50055AB44 /* NetworkRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BBE090326BB6D9200D898CD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5BBE090426BB6E0900D898CD /* Assets.xcassets */,
+				5BBE090526BB6E0900D898CD /* Info.plist */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5BBE090826BB6E3700D898CD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5BBE08BA26BA0B8100D898CD /* SceneDelegate.swift */,
+				5BBE090926BB6E7A00D898CD /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6FB58C63E67991E926CF687A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F4781183F9330C714F2A5AE /* Pods-StudioGhilbiApps.debug.xcconfig */,
+				498092286819FD26C559F5F3 /* Pods-StudioGhilbiApps.release.xcconfig */,
+				59ABB96B6EAC555D959417E2 /* Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig */,
+				9A7EB14FBB3627DE994DD01F /* Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.release.xcconfig */,
+				3CACBD727E6BD67788258472 /* Pods-StudioGhilbiAppsTests.debug.xcconfig */,
+				F91128ABA6E7CBFBA3FDB17B /* Pods-StudioGhilbiAppsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		78D5090A24D6BC98FD022909 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A178B44503602090B02A607F /* Pods_StudioGhilbiApps.framework */,
+				56B7C9B35D58F4C772D3AEA8 /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework */,
+				A201B0F7A0E10CEF0274D97E /* Pods_StudioGhilbiAppsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BBE08DF26BA0B8300D898CD /* Build configuration list for PBXNativeTarget "StudioGhilbiApps" */;
 			buildPhases = (
+				BC785EDE599DED1CAA0B11F8 /* [CP] Check Pods Manifest.lock */,
 				5BBE08B126BA0B8100D898CD /* Sources */,
 				5BBE08B226BA0B8100D898CD /* Frameworks */,
 				5BBE08B326BA0B8100D898CD /* Resources */,
+				A2F3F00860C3104C584F3ED2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BBE08E226BA0B8300D898CD /* Build configuration list for PBXNativeTarget "StudioGhilbiAppsTests" */;
 			buildPhases = (
+				81D155C5EB736D3C5881611F /* [CP] Check Pods Manifest.lock */,
 				5BBE08C726BA0B8300D898CD /* Sources */,
 				5BBE08C826BA0B8300D898CD /* Frameworks */,
 				5BBE08C926BA0B8300D898CD /* Resources */,
@@ -179,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BBE08E526BA0B8300D898CD /* Build configuration list for PBXNativeTarget "StudioGhilbiAppsUITests" */;
 			buildPhases = (
+				521C04DF2EDEF662C58F3691 /* [CP] Check Pods Manifest.lock */,
 				5BBE08D226BA0B8300D898CD /* Sources */,
 				5BBE08D326BA0B8300D898CD /* Frameworks */,
 				5BBE08D426BA0B8300D898CD /* Resources */,
+				07053094BF69637A0C9F85FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,9 +335,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBE08FF26BB1CC600D898CD /* MovileCollectionViewCell.xib in Resources */,
 				5BBE08ED26BA175400D898CD /* MovieListViewController.xib in Resources */,
+				5BBE090626BB6E0900D898CD /* Assets.xcassets in Resources */,
 				5BBE08C526BA0B8300D898CD /* LaunchScreen.storyboard in Resources */,
-				5BBE08C226BA0B8300D898CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,16 +358,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07053094BF69637A0C9F85FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		521C04DF2EDEF662C58F3691 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81D155C5EB736D3C5881611F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StudioGhilbiAppsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F3F00860C3104C584F3ED2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StudioGhilbiApps/Pods-StudioGhilbiApps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StudioGhilbiApps/Pods-StudioGhilbiApps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StudioGhilbiApps/Pods-StudioGhilbiApps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC785EDE599DED1CAA0B11F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StudioGhilbiApps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5BBE08B126BA0B8100D898CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBE090A26BB6E7A00D898CD /* AppDelegate.swift in Sources */,
 				5BBE08BD26BA0B8100D898CD /* ViewController.swift in Sources */,
-				5BBE08B926BA0B8100D898CD /* AppDelegate.swift in Sources */,
-				5BBE08EF26BA1F2600D898CD /* MovieModel.swift in Sources */,
+				5BBE08EF26BA1F2600D898CD /* Movie.swift in Sources */,
+				5BBE090D26BB7C8800D898CD /* MovieListViewModel.swift in Sources */,
+				5B3A6B3126BE75F50055AB44 /* NetworkRequest.swift in Sources */,
 				5BBE08BB26BA0B8100D898CD /* SceneDelegate.swift in Sources */,
+				5B8D33CA26BC849100C45BF9 /* MovieWorker.swift in Sources */,
+				5BBE08FE26BB1CC600D898CD /* MovieCollectionViewCell.swift in Sources */,
 				5BBE08EB26BA144D00D898CD /* MovieListViewController.swift in Sources */,
+				5BBE090226BB6B6300D898CD /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,11 +641,12 @@
 		};
 		5BBE08E026BA0B8300D898CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F4781183F9330C714F2A5AE /* Pods-StudioGhilbiApps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StudioGhilbiApps/Info.plist;
+				INFOPLIST_FILE = StudioGhilbiApps/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,11 +660,12 @@
 		};
 		5BBE08E126BA0B8300D898CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498092286819FD26C559F5F3 /* Pods-StudioGhilbiApps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StudioGhilbiApps/Info.plist;
+				INFOPLIST_FILE = StudioGhilbiApps/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +679,7 @@
 		};
 		5BBE08E326BA0B8300D898CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CACBD727E6BD67788258472 /* Pods-StudioGhilbiAppsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +701,7 @@
 		};
 		5BBE08E426BA0B8300D898CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91128ABA6E7CBFBA3FDB17B /* Pods-StudioGhilbiAppsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +723,7 @@
 		};
 		5BBE08E626BA0B8300D898CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59ABB96B6EAC555D959417E2 /* Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +743,7 @@
 		};
 		5BBE08E726BA0B8300D898CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A7EB14FBB3627DE994DD01F /* Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
