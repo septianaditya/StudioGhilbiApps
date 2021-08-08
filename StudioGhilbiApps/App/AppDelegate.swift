@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = MovieListViewController(searchKey: "", list: [])
+        let rootViewController = MovieListViewController(searchKey: "", list: [])
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
         
