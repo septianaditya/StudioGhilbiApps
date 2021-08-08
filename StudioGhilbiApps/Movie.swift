@@ -16,7 +16,7 @@ struct Movie: Codable {
     enum CodingKeys: String, CodingKey {
         case title
         case description
-        case releaseYear
+        case releaseYear = "release_date"
         case director
     }
     
@@ -33,5 +33,12 @@ struct Movie: Codable {
         self.description = description
         self.releaseYear = releaseYear
         self.director = director
+    }
+    
+    init() {
+        self.title = ""
+        self.description = ""
+        self.releaseYear = ""
+        self.director = ""
     }
 }

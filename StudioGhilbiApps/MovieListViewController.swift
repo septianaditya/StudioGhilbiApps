@@ -13,10 +13,11 @@ import RxCocoa
 class MovieListViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var movieListCollectionView: UICollectionView!
+    @IBOutlet weak var movieListTableView: UITableView!
     
     private let movieListViewModel = MovieListViewModel()
     private let cellIdentifier = "MovileCollectionViewCell"
+    private let tableCellIdentifier = "tableCellIdentifier"
     
     private let disposeBag = DisposeBag()
     
@@ -31,8 +32,9 @@ class MovieListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Movie List"
         
-        registerCollectionView()
+        registerTableView()
         searchBar.text = searchKey
         
         configureReactiveBinding()
@@ -44,16 +46,13 @@ class MovieListViewController: UIViewController {
         movieList = movieListData()
         
 //        movieListCollectionView.reloadData()
-        movieListViewModel.fetchMovieWithDummyData()
-//        movieListViewModel.fetchMovie()
+//        movieListViewModel.fetchMovieWithDummyData()
+        movieListViewModel.fetchMovie()
     }
     
-    func registerCollectionView() {
-//        movieListCollectionView.delegate = self
-//        movieListCollectionView.dataSource = self
+    func registerTableView() {
         
-        let nib = UINib(nibName: cellIdentifier, bundle: nil)
-        movieListCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
+        movieListTableView.register(MovieTableViewCell.self, forCellReuseIdentifier: tableCellIdentifier)
     }
     
     private func movieListData() -> [Movie] {
@@ -79,52 +78,13 @@ class MovieListViewController: UIViewController {
     }
 }
 
-extension MovieListViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! MovieCollectionViewCell
-
-        let movie = movieList[indexPath.row]
-        cell.renderData(movie: movie)
-        
-        return cell
-    }
-}
-
-extension MovieListViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width
-        return CGSize(width: width, height: 200)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 6
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 6, left: 20, bottom: 0, right: 20)
-    }
-}
-
 extension MovieListViewController {
     private func configureReactiveBinding() {
         movieListViewModel.movieListSubject.asObserver()
-            .bind(to: movieListCollectionView.rx.items(cellIdentifier: cellIdentifier, cellType: MovieCollectionViewCell.self)) { index, movie, cell in
-                print(movie)
-                cell.renderData(movie: movie)
+            .bind(to: movieListTableView.rx.items(cellIdentifier: tableCellIdentifier)) { index, movie, cell in
+                cell.textLabel?.text = movie.title ?? ""
+                cell.detailTextLabel?.text = "(\(movie.releaseYear ?? ""))"
+                cell.textLabel?.adjustsFontSizeToFitWidth = true
             }.disposed(by: disposeBag)
         
 //        searchBar.rx.text.asObservable()
@@ -139,6 +99,31 @@ extension MovieListViewController {
 //                cell.textLabel?.adjustsFontSizeToFitWidth = true
 //            }
 //            .disposed(by: disposeBag)
+        
+//        searchBar.rx.text.asObservable()
+//            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+//            .distinctUntilChanged()
+//            .map { $0 ?? "" }
+//            .subscribe { query in
+//                self.movieListViewModel.filterMovieByYear(year: query )
+//            }.disposed(by: disposeBag)
+        
+//        searchBar.rx.text.asObservable()
+//            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+//            .distinctUntilChanged()
+//            .map { query in
+//                self.movieListViewModel.movieListAll
+//            }
+            
+        
+        movieListTableView.rx.modelSelected(Movie.self)
+            .subscribe { [weak self] movie in
+                guard let self = self, let movieData = movie.element else { return }
+                
+                let vc = MoviewDetailViewController(movie: movieData)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
+
     }
 
 }

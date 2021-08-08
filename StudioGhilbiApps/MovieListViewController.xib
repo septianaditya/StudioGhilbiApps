@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieListViewController" customModule="StudioGhilbiApps" customModuleProvider="target">
             <connections>
-                <outlet property="movieListCollectionView" destination="qvj-RJ-Bzb" id="BSh-oJ-VBm"/>
+                <outlet property="movieListTableView" destination="IYD-f2-2AY" id="afh-eA-6pI"/>
                 <outlet property="searchBar" destination="lcT-i4-joA" id="PGX-Q3-vHC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="qwj-aQ-kPz"/>
             </connections>
@@ -22,28 +22,22 @@
             <subviews>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lcT-i4-joA">
                     <rect key="frame" x="0.0" y="44" width="414" height="51"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </searchBar>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qvj-RJ-Bzb">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IYD-f2-2AY">
                     <rect key="frame" x="0.0" y="86" width="414" height="776"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dsq-kG-3d3">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="IYD-f2-2AY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3l5-tt-zDp"/>
                 <constraint firstItem="lcT-i4-joA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Bjc-6o-WEs"/>
-                <constraint firstItem="qvj-RJ-Bzb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Btr-Nm-izt"/>
-                <constraint firstItem="qvj-RJ-Bzb" firstAttribute="top" secondItem="lcT-i4-joA" secondAttribute="bottom" constant="-9" id="Foj-tI-eEB"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qvj-RJ-Bzb" secondAttribute="trailing" id="a0i-wE-eJq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IYD-f2-2AY" secondAttribute="bottom" id="S5l-HN-6sN"/>
+                <constraint firstItem="IYD-f2-2AY" firstAttribute="top" secondItem="lcT-i4-joA" secondAttribute="bottom" constant="-9" id="iZY-yD-oDg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lcT-i4-joA" secondAttribute="trailing" id="rAA-Yq-Cbl"/>
-                <constraint firstItem="qvj-RJ-Bzb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="rc3-gP-eeR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IYD-f2-2AY" secondAttribute="trailing" id="sfp-C7-PFi"/>
                 <constraint firstItem="lcT-i4-joA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wWc-Ke-73e"/>
             </constraints>
             <point key="canvasLocation" x="13.043478260869566" y="89.732142857142847"/>

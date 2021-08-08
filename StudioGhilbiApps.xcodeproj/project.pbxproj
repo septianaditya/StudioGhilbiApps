@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		313DCBAA73480F33793BB68E /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7C9B35D58F4C772D3AEA8 /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework */; };
 		5B3A6B3126BE75F50055AB44 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A6B3026BE75F50055AB44 /* NetworkRequest.swift */; };
+		5B3A6B3326BF43F80055AB44 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A6B3226BF43F80055AB44 /* MovieTableViewCell.swift */; };
+		5B3A6B3826BFB69E0055AB44 /* MoviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A6B3626BFB69E0055AB44 /* MoviewDetailViewController.swift */; };
+		5B3A6B3926BFB69E0055AB44 /* MoviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3A6B3726BFB69E0055AB44 /* MoviewDetailViewController.xib */; };
 		5B8D33CA26BC849100C45BF9 /* MovieWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D33C926BC849100C45BF9 /* MovieWorker.swift */; };
 		5BBE08BB26BA0B8100D898CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08BA26BA0B8100D898CD /* SceneDelegate.swift */; };
 		5BBE08BD26BA0B8100D898CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE08BC26BA0B8100D898CD /* ViewController.swift */; };
@@ -52,6 +55,9 @@
 		56B7C9B35D58F4C772D3AEA8 /* Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudioGhilbiApps_StudioGhilbiAppsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59ABB96B6EAC555D959417E2 /* Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig"; path = "Target Support Files/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests/Pods-StudioGhilbiApps-StudioGhilbiAppsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B3A6B3026BE75F50055AB44 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		5B3A6B3226BF43F80055AB44 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		5B3A6B3626BFB69E0055AB44 /* MoviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewDetailViewController.swift; sourceTree = "<group>"; };
+		5B3A6B3726BFB69E0055AB44 /* MoviewDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviewDetailViewController.xib; sourceTree = "<group>"; };
 		5B8D33C926BC849100C45BF9 /* MovieWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorker.swift; sourceTree = "<group>"; };
 		5BBE08B526BA0B8100D898CD /* StudioGhilbiApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioGhilbiApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBE08BA26BA0B8100D898CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B3A6B3426BFB65D0055AB44 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5B3A6B3526BFB6710055AB44 /* View */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		5B3A6B3526BFB6710055AB44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B3A6B3626BFB69E0055AB44 /* MoviewDetailViewController.swift */,
+				5B3A6B3726BFB69E0055AB44 /* MoviewDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B8D33C826BC846100C45BF9 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +165,7 @@
 		5BBE08B726BA0B8100D898CD /* StudioGhilbiApps */ = {
 			isa = PBXGroup;
 			children = (
+				5B3A6B3426BFB65D0055AB44 /* MovieDetail */,
 				5B8D33C826BC846100C45BF9 /* Worker */,
 				5BBE090826BB6E3700D898CD /* App */,
 				5BBE090326BB6D9200D898CD /* Assets */,
@@ -154,6 +178,7 @@
 				5BBE08FC26BB1CC600D898CD /* MovieCollectionViewCell.swift */,
 				5BBE08FD26BB1CC600D898CD /* MovileCollectionViewCell.xib */,
 				5BBE090C26BB7C8800D898CD /* MovieListViewModel.swift */,
+				5B3A6B3226BF43F80055AB44 /* MovieTableViewCell.swift */,
 			);
 			path = StudioGhilbiApps;
 			sourceTree = "<group>";
@@ -338,6 +363,7 @@
 				5BBE08FF26BB1CC600D898CD /* MovileCollectionViewCell.xib in Resources */,
 				5BBE08ED26BA175400D898CD /* MovieListViewController.xib in Resources */,
 				5BBE090626BB6E0900D898CD /* Assets.xcassets in Resources */,
+				5B3A6B3926BFB69E0055AB44 /* MoviewDetailViewController.xib in Resources */,
 				5BBE08C526BA0B8300D898CD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,11 +496,13 @@
 				5BBE08BD26BA0B8100D898CD /* ViewController.swift in Sources */,
 				5BBE08EF26BA1F2600D898CD /* Movie.swift in Sources */,
 				5BBE090D26BB7C8800D898CD /* MovieListViewModel.swift in Sources */,
+				5B3A6B3826BFB69E0055AB44 /* MoviewDetailViewController.swift in Sources */,
 				5B3A6B3126BE75F50055AB44 /* NetworkRequest.swift in Sources */,
 				5BBE08BB26BA0B8100D898CD /* SceneDelegate.swift in Sources */,
 				5B8D33CA26BC849100C45BF9 /* MovieWorker.swift in Sources */,
 				5BBE08FE26BB1CC600D898CD /* MovieCollectionViewCell.swift in Sources */,
 				5BBE08EB26BA144D00D898CD /* MovieListViewController.swift in Sources */,
+				5B3A6B3326BF43F80055AB44 /* MovieTableViewCell.swift in Sources */,
 				5BBE090226BB6B6300D898CD /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
