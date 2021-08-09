@@ -15,7 +15,8 @@ class MovieListViewModel {
     
     var movieListAll = PublishSubject<[Movie]>()
     var movieListSubject = PublishSubject<[Movie]>()
-    
+    var movieList = [Movie]()
+
     func fetchMovie() {
         
         return networkAPIService.getMovieList()
@@ -25,6 +26,7 @@ class MovieListViewModel {
                 guard let element = resp.element else { return }
                 self.movieListSubject.onNext(element)
                 self.movieListAll.onNext(element)
+                self.movieList = element
 
             }.disposed(by: disposeBag)
         
@@ -53,23 +55,18 @@ class MovieListViewModel {
         movieListAll.onNext(movieList)
     }
     
-//    func filterMovieByYear(year: String) {
-//        guard year.isEmpty else {
-//           return movieListAll.asObservable()
-//            .flatMap({ movies in
-//                movies.filter { movie in
-//                    movie.releaseYear?.contains(year) as! Bool
-//                }
-//            })
-//            .map { [weak self] movies in
-//                s
-//            }
-//            .bind(to: movieListSubject.onNext())
-//            
-//
-//
-////                .bind(to: movieListSubject)
-////                .disposed(by: disposeBag)
-//        }
-//    }
+    func filterMovieByYear(year: String) {
+        Observable.from(movieList)
+            .filter { movie in
+                if year == "" {
+                    return true
+                }
+                return movie.releaseYear == year
+            }
+            .toArray()
+            .subscribe(onSuccess: { movie in
+                self.movieListSubject.onNext(movie)
+            })
+            .disposed(by: disposeBag)
+    }
 }
